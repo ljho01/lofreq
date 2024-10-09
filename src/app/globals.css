@@ -3,25 +3,51 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --pageWidth-0: 320px;
+  --pageMaxWidth-0: 600px;
+  --pageTopPadding-0: 120px;
+  --paddingX-0: 24px;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+
+.background {
+  width: 100%;
+  height: 100%;
+  transition: background-color 0.3s;
+  overflow-x: hidden;
+}
+
+.contentsBox {
+  width: 100%;
+  padding: var(--paddingX-0);
+  word-wrap: break-word;
+  padding-top: var(--pageTopPadding-0);
+  max-width: var(--pageMaxWidth-0);
+}
+
+.pageTitle {
+  display: inline-block;
+  position: absolute;
+  font-weight: bold;
+  top: calc(var(--pageTopPadding-0) - 2em);
+  left: var(--paddingX-0);
+}
+
+hr {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 0px;
+  height: 0.5px;
+  width: calc(100vw - var(--paddingX-0));
+  margin: 8px 0px;
+}
+
+.gallery {
+  max-width: var(--pageMaxWidth-0);
 }
