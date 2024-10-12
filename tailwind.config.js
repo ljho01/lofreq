@@ -9,10 +9,10 @@ module.exports = {
     extend: {
       colors: {
         "photos": "#FAF5EE",
-        "music": "#FFEEFF",
+        "music": "rgb(248, 248, 250)",
         "me": "#EEEEFF",
         "photosHalf": "rgba(250, 245, 238, 0.8)",
-        "musicHalf": "rgba(255, 238, 255, 0.8)",
+        "musicHalf": "rgbㅁ(248, 248, 250, 0.8)",
         "meHalf": "rgba(238, 238, 255, 0.8)"
       },
     },
